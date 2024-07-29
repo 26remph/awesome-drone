@@ -1,2 +1,2 @@
-# awesome-drone
-List of awesome Drones, libraries, software and resources.
+# Awesome drone
+List of awesome , libraries, software and resources for drone create.
