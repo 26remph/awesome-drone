@@ -1,9 +1,8 @@
-# Awesome drone
-List of awesome , libraries, software and resources for drone create.  
+<img height="240" src="./media/header.png" width="890"/>
 
-![ava_sample.png](media%2Fava_sample.png)
-<img height="205" src="/Users/hero/PycharmProjects/flyeye/awesome-drone/media/ava_sample.png"   
-width="205"/>
+# Awesome drone
+List of awesome , libraries, software and resources for drone create.
+
 <!-- TOC -->
 * [Awesome drone](#awesome-drone)
   * [Geolocation](#geolocation)
