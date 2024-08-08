@@ -9,7 +9,7 @@ List of awesome , libraries, software and resources for drone create.
     * [Image Processing](#image-processing)
     * [Video](#video)
     * [Audio](#audio)
-  * [Learn](#learn)
+  * [Learn drone](#learn-drone)
     * [Computer Vision](#computer-vision)
     * [Machine Learning](#machine-learning)
     * [Deep Learning](#deep-learning)
@@ -27,7 +27,6 @@ List of awesome , libraries, software and resources for drone create.
     * [Cryptography](#cryptography)
     * [Caching](#caching)
     * [Database Drivers](#database-drivers)
-    * [Database admin panel](#database-admin-panel)
     * [ORM](#orm)
     * [Task Queues](#task-queues)
     * [WebSocket](#websocket)
@@ -94,7 +93,7 @@ List of awesome , libraries, software and resources for drone create.
     * [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
     * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
   
-## Learn
+## Learn drone
 
 ### Computer Vision
 
@@ -262,9 +261,6 @@ List of awesome , libraries, software and resources for drone create.
     * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
     * [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
-
-### Database admin panel
-*Libraries for simple admin databases.*
 
 ### ORM
 
