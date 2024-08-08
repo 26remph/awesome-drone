@@ -5,6 +5,8 @@ List of awesome , libraries, software and resources for drone create.
 
 <!-- TOC -->
 * [Context](#context)
+* [Drone construction](#drone-construction)
+  * [Robotics](#robotics)
   * [Media manipulation](#media-manipulation)
     * [Image Processing](#image-processing)
     * [Video](#video)
@@ -38,7 +40,6 @@ List of awesome , libraries, software and resources for drone create.
   * [File Manipulation](#file-manipulation)
   * [GUI Development](#gui-development)
   * [Testing](#testing)
-* [Robotics](#robotics)
 * [Resources](#resources)
   * [Newsletters](#newsletters)
   * [Podcasts](#podcasts)
@@ -220,7 +221,7 @@ List of awesome , libraries, software and resources for drone create.
 *Libraries for building RESTful APIs.*
 
 * Framework agnostic
-    * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
+    * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints. Also see [Awesome FastAPI](https://github.com/mjhea0/awesome-fastapi)
     * [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
 
 ### Data Validation
