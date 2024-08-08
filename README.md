@@ -45,6 +45,13 @@ List of awesome , libraries, software and resources for drone create.
 * [Contributing](#contributing)
 <!-- TOC -->
 
+# Drone construction
+## Robotics
+
+*Libraries for robotics.*
+
+* [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
+* [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
 
 ## Media manipulation
 ### Image Processing
@@ -344,7 +351,7 @@ List of awesome , libraries, software and resources for drone create.
 * [kivy](https://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
 * [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
 * [PyGObject](https://pygobject.readthedocs.io/) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
-* [PyQt](https://doc.qt.io/qtforpython/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
+* [PyQt](https://doc.qt.io/qtforpython/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework. Allso see [Awesome Qt](https://github.com/JesseTG/awesome-qt#readme)
 * [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI) - Wrapper for tkinter, Qt, WxPython and Remi.
 * [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
 * [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
@@ -381,13 +388,6 @@ List of awesome , libraries, software and resources for drone create.
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
     * [radar](https://pypi.org/project/radar/) - Generate random datetime / time.
-
-# Robotics
-
-*Libraries for robotics.*
-
-* [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
-* [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
 
 # Resources
 
