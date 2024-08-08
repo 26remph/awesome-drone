@@ -1,67 +1,54 @@
 <img height="240" src="./media/header.png" width="890"/>
 
-# Awesome drone
+# Context
 List of awesome , libraries, software and resources for drone create.
 
 <!-- TOC -->
-* [Awesome drone](#awesome-drone)
-  * [Geolocation](#geolocation)
-    * [Geolocation 3 level](#geolocation-3-level)
-  * [Computer Vision](#computer-vision)
-  * [Image Processing](#image-processing)
-  * [Video](#video)
-  * [Machine Learning](#machine-learning)
-  * [Deep Learning](#deep-learning)
+* [Context](#context)
+  * [Media manipulation](#media-manipulation)
+    * [Image Processing](#image-processing)
+    * [Video](#video)
+    * [Audio](#audio)
+  * [Learn](#learn)
+    * [Computer Vision](#computer-vision)
+    * [Machine Learning](#machine-learning)
+    * [Deep Learning](#deep-learning)
   * [Distributed Computing](#distributed-computing)
   * [Data Analysis](#data-analysis)
   * [Data Visualization](#data-visualization)
-  * [Data Validation](#data-validation)
-  * [Audio](#audio)
-  * [Admin Panels](#admin-panels)
-  * [Asynchronous Programming](#asynchronous-programming)
-  * [Audio](#audio-1)
-  * [Authentication](#authentication)
-  * [Cryptography](#cryptography)
-  * [Caching](#caching)
-  * [Code Analysis](#code-analysis)
-  * [Command-line Interface Development](#command-line-interface-development)
-  * [Environment Management](#environment-management)
-  * [Database Drivers](#database-drivers)
+  * [Geolocation](#geolocation)
+  * [Drone Backend](#drone-backend)
+    * [Asynchronous Programming](#asynchronous-programming)
+    * [Admin Panels](#admin-panels)
+    * [Authentication](#authentication)
+    * [RESTful API](#restful-api)
+    * [Data Validation](#data-validation)
+    * [HTTP Clients](#http-clients)
+    * [Cryptography](#cryptography)
+    * [Caching](#caching)
+    * [Database Drivers](#database-drivers)
+    * [Database admin panel](#database-admin-panel)
+    * [ORM](#orm)
+    * [Task Queues](#task-queues)
+    * [WebSocket](#websocket)
+    * [ASGI Servers](#asgi-servers)
+  * [Code helpers](#code-helpers)
+    * [Code Analysis](#code-analysis)
+    * [Command-line Interface Development](#command-line-interface-development)
+    * [Environment Management](#environment-management)
   * [File Manipulation](#file-manipulation)
   * [GUI Development](#gui-development)
-  * [HTTP Clients](#http-clients)
-  * [ORM](#orm)
-  * [RESTful API](#restful-api)
-  * [Robotics](#robotics)
-  * [Task Queues](#task-queues)
-  * [WebSocket](#websocket)
-  * [ASGI Servers](#asgi-servers)
+  * [Testing](#testing)
+* [Robotics](#robotics)
 * [Resources](#resources)
   * [Newsletters](#newsletters)
   * [Podcasts](#podcasts)
 * [Contributing](#contributing)
 <!-- TOC -->
 
-## Geolocation
 
-*Libraries for geocoding addresses and working with latitudes and longitudes.*
-
-* [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides a country field for models and forms.
-* [geodjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
-* [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
-* [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
-
-## Computer Vision
-
-*Libraries for Computer Vision.*
-
-* [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
-* [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
-* [opencv](https://opencv.org/) - Open Source Computer Vision Library.
-* [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
-* [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
-
-## Image Processing
+## Media manipulation
+### Image Processing
 
 *Libraries for manipulating images.*
 
@@ -76,7 +63,7 @@ List of awesome , libraries, software and resources for drone create.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 * [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
 
-## Video
+### Video
 
 *Libraries for manipulating video and GIFs.*
 
@@ -84,7 +71,42 @@ List of awesome , libraries, software and resources for drone create.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 * [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 
-## Machine Learning
+### Audio
+
+*Libraries for manipulating audio and its metadata.*
+
+*Libraries for manipulating audio and its metadata.*
+
+* Audio
+    * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
+    * [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
+    * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
+    * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
+    * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
+    * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
+    * [mingus](http://bspaans.github.io/python-mingus/) - An advanced music theory and notation package with MIDI file and playback support.
+    * [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
+    * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
+    * [timeside](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
+* Metadata
+    * [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
+    * [eyed3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
+    * [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
+    * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
+  
+## Learn
+
+### Computer Vision
+
+*Libraries for Computer Vision.*
+
+* [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
+* [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
+* [opencv](https://opencv.org/) - Open Source Computer Vision Library.
+* [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
+* [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
+
+### Machine Learning
 
 *Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
@@ -97,8 +119,8 @@ List of awesome , libraries, software and resources for drone create.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
-* 
-## Deep Learning
+
+### Deep Learning
 
 *Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning).*
 
@@ -138,16 +160,32 @@ List of awesome , libraries, software and resources for drone create.
 * [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
 * [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 
-## Data Validation
 
-*Libraries for validating data. Used for forms in many cases.*
-* [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
+## Geolocation
 
-## Audio
+*Libraries for geocoding addresses and working with latitudes and longitudes.*
 
-*Libraries for manipulating audio and its metadata.*
+* [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides a country field for models and forms.
+* [geodjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
+* [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
+* [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 
-## Admin Panels
+
+## Drone Backend
+
+*Main stream python libraries for build drone backend.*
+
+### Asynchronous Programming
+
+*Libraries for asynchronous, concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
+
+* [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
+    - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)
+* [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
+* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
+* [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
+
+### Admin Panels
 
 *Libraries for administrative interfaces.*
 
@@ -158,21 +196,7 @@ List of awesome , libraries, software and resources for drone create.
 * [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
 * [django-jet](https://github.com/geex-arts/django-jet.git) - Modern template for Django admin interface with improved functionality.
 
-## Asynchronous Programming
-
-*Libraries for asynchronous, concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
-
-* [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
-    - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)
-* [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
-* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
-* [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
-
-## Audio
-
-*Libraries for manipulating audio and its metadata.*
-
-## Authentication
+### Authentication
 
 *Libraries for implementing authentications schemes.*
 
@@ -185,11 +209,30 @@ List of awesome , libraries, software and resources for drone create.
    * [keycloak-sso](https://github.com/keycloak/keycloak) - Open Source Identity and Access Management.
    * [zitadel](https://github.com/zitadel/zitadel.git) - Offers everything you need for a customer identity (CIAM) use case. Support Machine-to-machine with JWT profile, Personal Access Tokens (PAT), and Client Credentials
 
-## Cryptography
+### RESTful API
+
+*Libraries for building RESTful APIs.*
+
+* Framework agnostic
+    * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
+    * [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
+
+### Data Validation
+
+*Libraries for validating data. Used for forms in many cases.*
+* [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
+
+### HTTP Clients
+
+*Libraries for working with HTTP.*
+
+* [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
+
+### Cryptography
 * [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python
 
 
-## Caching
+### Caching
 
 *Libraries for caching data.*
 
@@ -197,30 +240,7 @@ List of awesome , libraries, software and resources for drone create.
 * [redis](https://github.com/redis/redis) - Redis is often referred to as a data structures server.
 * [memcached](https://github.com/memcached/memcached) - Memcached is a high performance multithreaded event-based key/value cache store intended to be used in a distributed system.
 
-
-## Code Analysis
-
-*Tools of static analysis, linters and code quality checkers.*
-
-* Code Linters & formatters and type checkers
-    * [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter, written in Rust.
-    * [mypy](https://github.com/python/mypy) - Check variable types during compile time.
-
-## Command-line Interface Development
-
-*Libraries for building command-line applications.*
-
-* Terminal Rendering
-    * [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
-
-## Environment Management
-
-*Libraries for Python version and virtual environment management.*
-
-* [poetry](https://github.com/python-poetry/poetry.git) - Poetry helps you declare, manage and install dependencies of Python projects, ensuring you have the right stack everywhere.
-
-
-## Database Drivers
+### Database Drivers
 
 *Libraries for connecting and operating databases.*
 
@@ -242,6 +262,68 @@ List of awesome , libraries, software and resources for drone create.
     * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
     * [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
+
+### Database admin panel
+*Libraries for simple admin databases.*
+
+### ORM
+
+*Libraries that implement Object-Relational Mapping or data mapping techniques.*
+
+* Relational Databases
+    * [SQLAlchemy](https://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
+        * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
+* NoSQL Databases
+    * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
+    * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
+
+### Task Queues
+
+*Libraries for working with task queues.*
+
+* [celery](https://docs.celeryproject.org/en/stable/) - An asynchronous task queue/job queue based on distributed message passing.
+* [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
+* [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
+* [mrq](https://github.com/pricingassistant/mrq) - A distributed worker task queue in Python using Redis & gevent.
+* [rq](https://github.com/rq/rq) - Simple job queues for Python.
+
+### WebSocket
+
+*Libraries for working with WebSocket.*
+
+* [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
+* [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
+* [websockets](https://github.com/aaugustin/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
+
+### ASGI Servers
+
+*[ASGI](https://asgi.readthedocs.io/en/latest/)-compatible web servers.*
+
+* [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
+* [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
+* [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
+
+## Code helpers
+### Code Analysis
+
+*Tools of static analysis, linters and code quality checkers.*
+
+* Code Linters & formatters and type checkers
+    * [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter, written in Rust.
+    * [mypy](https://github.com/python/mypy) - Check variable types during compile time.
+
+### Command-line Interface Development
+
+*Libraries for building command-line applications.*
+
+* Terminal Rendering
+    * [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
+
+### Environment Management
+
+*Libraries for Python version and virtual environment management.*
+
+* [poetry](https://github.com/python-poetry/poetry.git) - Poetry helps you declare, manage and install dependencies of Python projects, ensuring you have the right stack everywhere.
 
 ## File Manipulation
 
@@ -275,47 +357,9 @@ List of awesome , libraries, software and resources for drone create.
 * [wxPython](https://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
 
-## HTTP Clients
+## Testing
 
-*Libraries for working with HTTP.*
-
-* [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
-
-## ORM
-
-*Libraries that implement Object-Relational Mapping or data mapping techniques.*
-
-* Relational Databases
-    * [SQLAlchemy](https://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
-        * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
-* NoSQL Databases
-    * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
-    * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
-  
-## RESTful API
-
-*Libraries for building RESTful APIs.*
-
-* Framework agnostic
-    * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
-    * [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
-
-## Robotics
-
-*Libraries for robotics.*
-
-* [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
-* [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
-
-## Task Queues
-
-*Libraries for working with task queues.*
-
-* [celery](https://docs.celeryproject.org/en/stable/) - An asynchronous task queue/job queue based on distributed message passing.
-* [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
-* [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
-* [mrq](https://github.com/pricingassistant/mrq) - A distributed worker task queue in Python using Redis & gevent.
-* [rq](https://github.com/rq/rq) - Simple job queues for Python.
+*Libraries for testing codebases and generating test data.*
 
 * Testing Frameworks
     * [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool.
@@ -342,21 +386,12 @@ List of awesome , libraries, software and resources for drone create.
     * [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
     * [radar](https://pypi.org/project/radar/) - Generate random datetime / time.
 
-## WebSocket
+# Robotics
 
-*Libraries for working with WebSocket.*
+*Libraries for robotics.*
 
-* [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
-* [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
-* [websockets](https://github.com/aaugustin/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
-
-## ASGI Servers
-
-*[ASGI](https://asgi.readthedocs.io/en/latest/)-compatible web servers.*
-
-* [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
-* [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
-* [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
+* [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
+* [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
 
 # Resources
 
@@ -372,4 +407,4 @@ Your contributions are always welcome! Please take a look at the [contribution g
 
 - - -
 
-If you have any question about this opinionated list, do not hesitate to contact me [@vvbars](https://t.me/vvbars) on Twitter or open an issue on GitHub.
+If you have any question about this opinionated list, do not hesitate to contact me [@vvbars](https://t.me/vvbars) on Telegram or open an issue on GitHub.
