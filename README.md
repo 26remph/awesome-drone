@@ -4,9 +4,7 @@
 # Intro
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-List of awesome , libraries, software and resources for drone create.
-
-This list is a collection of tools, projects, images and resources conforming to the [Awesome Manifesto](awesome.md)
+List of awesome , libraries, software and resources for drone create, conforming to the [Awesome Manifesto](awesome.md)
 
 Contributions *very welcome* but first see [Contributing](#contributing)
 
