@@ -8,9 +8,10 @@ List of awesome , libraries, software and resources for drone create, conforming
 
 Contributions *very welcome* but first see [Contributing](#contributing)
 
+---
 
+# Context
 <!-- TOC -->
-* [Intro](#intro)
 * [Drone construction](#drone-construction)
   * [Simulators](#simulators)
   * [Software and Libraries](#software-and-libraries)
