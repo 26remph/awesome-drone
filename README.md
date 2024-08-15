@@ -1,19 +1,31 @@
 <img height="240" src="./media/header.png" width="890"/>
 
-# Context
+
+# Intro
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
 List of awesome , libraries, software and resources for drone create.
 
-Mainstream stack:
-Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, OrangePI
+This list is a collection of tools, projects, images and resources conforming to the [Awesome Manifesto](awesome.md)
+
+Contributions *very welcome* but first see [Contributing](#contributing)
+
 
 <!-- TOC -->
-* [Context](#context)
+* [Intro](#intro)
 * [Drone construction](#drone-construction)
+  * [Simulators](#simulators)
+  * [Software and Libraries](#software-and-libraries)
+    * [Libraries](#libraries)
+    * [Ground Control Stations](#ground-control-stations)
+  * [Firmware](#firmware)
+    * [Transmitters](#transmitters)
+    * [Flight Controllers](#flight-controllers)
+  * [Hardware and Components](#hardware-and-components)
+    * [Platforms](#platforms)
+    * [Drone Frames](#drone-frames)
+  * [Visual Localization](#visual-localization)
   * [Robotics](#robotics)
-* [Media manipulation](#media-manipulation)
-  * [Image Processing](#image-processing)
-  * [Video](#video)
-  * [Audio](#audio)
 * [Learn drone](#learn-drone)
   * [Computer Vision](#computer-vision)
   * [Machine Learning](#machine-learning)
@@ -23,6 +35,10 @@ Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, Or
   * [Data Analysis](#data-analysis)
   * [Data Visualization](#data-visualization)
   * [Science](#science)
+* [Media manipulation](#media-manipulation)
+  * [Image Processing](#image-processing)
+  * [Video](#video)
+  * [Audio](#audio)
 * [Drone Backend](#drone-backend)
   * [Asynchronous Programming](#asynchronous-programming)
   * [Admin Panels](#admin-panels)
@@ -47,12 +63,110 @@ Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, Or
 * [GUI Development](#gui-development)
 * [Testing](#testing)
 * [Resources](#resources)
+  * [Courses](#courses)
+    * [Udemy](#udemy)
+  * [Services](#services)
   * [Newsletters](#newsletters)
+    * [Remote Control Transmitters](#remote-control-transmitters)
+    * [Headsets](#headsets)
+    * [Video Receivers](#video-receivers)
+      * [1.3GHz](#13ghz)
+      * [2.4GHz](#24ghz)
+      * [5.8GHz](#58ghz)
+    * [Electronics and Motors](#electronics-and-motors)
+    * [Cameras](#cameras)
+    * [Vendors](#vendors)
+      * [Consumer](#consumer)
+      * [Military Vendors](#military-vendors)
+    * [Unmanned Ground Vehicles](#unmanned-ground-vehicles)
+      * [Autonomous Ground Vehicles](#autonomous-ground-vehicles)
+    * [Unmanned Underwater Vehicles](#unmanned-underwater-vehicles)
   * [Podcasts](#podcasts)
 * [Contributing](#contributing)
 <!-- TOC -->
 
 # Drone construction
+*Software, libraries, firmware and hardware part for drone construct.*
+
+## Simulators
+
+* [AirSim](https://github.com/Microsoft/AirSim) - Open source simulator based on Unreal Engine for autonomous vehicles.
+* [Drone Racing Arcade](https://thedroneracingleague.com/arcade/) - Mobile based FPV racing game
+* [DRL Drone Racing Simulator](https://thedroneracingleague.com/drlsim/) - FPV Racing game and simulator with official DRL tracks.
+* [FPV Air 2](https://store.steampowered.com/app/889040/FPV_Air_2/) - :dollar: - Basic FPV simulator, runs on slower hardware. Available on Steam.
+* [FPV Freerider](https://fpv-freerider.itch.io/fpv-freerider) - :dollar: FPV (first person view) and LOS (line of sight) racing simulator.
+* [FPV Freerider Recharged](https://fpv-freerider.itch.io/fpv-freerider-recharged) - :dollar: FPV (first person view) and LOS (line of sight) racing simulator.
+* [LiftOff](https://www.immersionrc.com/fpv-products/liftoff-drone-race-simulator/) - :dollar: FPV racing simulator with realistic OSD (on-screen display) experience.
+* [Orqa FPV.SkyDive](https://skydive.orqafpv.com/) - Orqa FPV's racing and freestyle simulator.
+* [RotorRush](http://rotorrush.com/) - :dollar: Formerly known as FPV Event. Subscription based simulator.
+* [VelociDrone](https://www.velocidrone.com/) - :dollar: Multiplayer FPV racing simulator.
+
+## Software and Libraries
+
+* [ArduPilot Mission Planner](https://github.com/ArduPilot/MissionPlanner) - Mission planner software.
+* [Paparazzi](http://wiki.paparazziuav.org/wiki/Main_Page) - Software suite for UAVs, including ground control and autopilot.
+* [QGroundControl](http://qgroundcontrol.com/) - Ground Control Station for PX4 and ArduPilot based UAVs.
+
+### Libraries
+
+* [DJI Onboard SDK](https://github.com/dji-sdk/Onboard-SDK) - The Onboard SDK allows you to connect to a supported DJI flight controller using a serial port (TTL UART).
+* [GoBot](https://github.com/hybridgroup/gobot) - Golang framework for robotics, drones, and the Internet of Things (IoT).
+* [Libcyphal](https://github.com/OpenCyphal-Garage/libcyphal) - Portable reference implementation of the Cyphal protocol stack in C++ for embedded systems and Linux. Formerly known as LibUAVCAN.
+* [MAVLink](https://github.com/mavlink/mavlink) - Micro Air Vehicle Message Marshalling Library.
+* [MAVROS](https://github.com/mavlink/mavros) - MAVLink to ROS gateway with a proxy for Ground Control Station.
+
+### Ground Control Stations
+
+* [QGroundControl](https://github.com/mavlink/qgroundcontrol) - Cross-platform ground control station for drones (Android, iOS, Mac OS, Linux, Windows).
+* [MAVProxy](http://ardupilot.github.io/MAVProxy/) - A UAV ground station software package for MAVLink based systems.
+* [Ardupilot Mission Planner](https://ardupilot.org/planner/index.html) - A full-featured ground station application for the ArduPilot open source autopilot project.
+* [APM Planner 2](https://ardupilot.org/planner2/) - An open-source ground station application for MAVlink based autopilots including APM and PX4/Pixhawk that can be run on Windows, Mac OSX, and Linux.
+
+## Firmware
+### Transmitters
+
+* [FreedomTX](https://github.com/tbs-fpv/freedomtx) - Custom firmware for TBS Tango 2 based on OpenTX.
+* [OpenTX](http://www.open-tx.org/) - Highly configurable open source firmware for RC radio transmitters.
+
+### Flight Controllers
+
+* [Ardupilot](https://github.com/ArduPilot/ardupilot)
+* [BaseFlight](https://github.com/multiwii/baseflight) - :ghost:
+* [Betaflight](https://github.com/betaflight/betaflight) - Fork of Cleanflight.
+* [ButterFlight](https://github.com/ButterFlight/butterflight) - :ghost: Fork of Betaflight. Firmware focusing on Mini Quads.
+* [Cleanflight](https://github.com/cleanflight/cleanflight) - :ghost: Fork of BaseFlight. Supports more FCs and has additional PID contollers.
+* [dRonin](https://dronin.org) - :ghost: Autopilot/flight controller firmware for controllers in the OpenPilot/Tau Labs family.
+* [EmuFlight](https://github.com/emuflight/EmuFlight) - FC Firmware focusing on flight performance, innovative filtering, leading-edge feature additions, and wide target support.
+* [FalcoX](https://flightone.com/download.php?version=stable) - Formerly known as Raceflight one, FlightOne.
+* [INAV](https://github.com/iNavFlight/inav)
+* [Kiss](https://www.flyduino.net/en_US/page/downloads) - Firmware for KISS FCs.
+* [LibrePilot](https://github.com/librepilot/LibrePilot) - :ghost: (GitHub fork is Outdated/Inactive)
+* [Open Source Rover Control Code](https://github.com/nasa-jpl/osr-rover-code) - Nasa JPL command firmware for the OSR.
+* [PX4 Autopilot](https://github.com/PX4/PX4-Autopilot) - Rebranded to AutoPilot from Firmware
+* [SilverWare](https://github.com/silver13/BoldClash-BWHOOP-B-03) - :ghost: Firmware for BoldClash BWHOOP B-03 mini drone
+* [SilverWare(NFE)](https://github.com/NotFastEnuf/NFE_Silverware) - :ghost: Firmware for Alienwhoop ZER0, E011, BWHOOP B-03, H8mini, and BETA FPV LITE flight controllers with NotFastEnuf settings and experimental features
+
+## Hardware and Components
+
+### Platforms
+
+* [OpenUAV](https://openuav.eava.ee) - Open-souce UAV platform for research and development
+
+### Drone Frames
+
+* [Source One by TBS](https://github.com/tbs-trappy/source_one) - Open Source freestyle FPV drone frame.
+* [Source Two by TBS](https://github.com/ps915/source_two) - Open Source racing FPV drone frame.
+* [Source Micro by TBS](https://github.com/ps915/source_micro) - Open Source mini drone frame.
+* [Source PodRacer](https://github.com/ps915/source_podracer) - Open source ultra-light drone frame.
+* [Source V by TBS](https://github.com/ps915/source_v) - Open Source ultra-stiff drone frame.
+* [Source X by TBS](https://github.com/ps915/source_x) - Open Source giant racing drone frame.
+
+## Visual Localization
+*   [Drone-Satellite-Ground Three Platiform Localization](https://github.com/layumi/University1652-Baseline) 
+*   [ACM MM2023 Workshop: UAV in Multimedia](https://www.zdzheng.xyz/ACMMM2023Workshop/)
+*   [Visual Localization Leaderboard](https://github.com/layumi/University1652-Baseline/tree/master/State-of-the-art)
+
+
 ## Robotics
 
 *Libraries for robotics.*
@@ -66,52 +180,7 @@ Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, Or
   * Also see [awesome-micropython](https://github.com/mcauser/awesome-micropython#readme)
   * Also see [awesome-raspberry-pi](https://github.com/thibmaek/awesome-raspberry-pi?tab=readme-ov-file#models).  
 
-
-# Media manipulation
-## Image Processing
-
-*Libraries for manipulating images.*
-
-* [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
-* [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
-* [pymatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
-* [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
-* [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
-* [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
-* [quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
-* [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
-* [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
-* [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
-
-## Video
-
-*Libraries for manipulating video and GIFs.*
-
-* [moviepy](https://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
-* [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
-* [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
-
-## Audio
-
-*Libraries for manipulating audio and its metadata.*
-
-* Audio
-    * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
-    * [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
-    * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
-    * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
-    * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
-    * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
-    * [mingus](http://bspaans.github.io/python-mingus/) - An advanced music theory and notation package with MIDI file and playback support.
-    * [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
-    * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
-    * [timeside](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
-* Metadata
-    * [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
-    * [eyed3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
-    * [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
-    * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
-  
+ 
 # Learn drone
 
 *libraries for create drone looks like biological life*
@@ -195,6 +264,51 @@ Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, Or
 
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [SciPy](https://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
+
+# Media manipulation
+## Image Processing
+
+*Libraries for manipulating images.*
+
+* [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
+* [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
+* [pymatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
+* [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
+* [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
+* [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
+* [quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
+* [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
+* [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
+* [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
+
+## Video
+
+*Libraries for manipulating video and GIFs.*
+
+* [moviepy](https://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
+* [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
+* [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
+
+## Audio
+
+*Libraries for manipulating audio and its metadata.*
+
+* Audio
+    * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
+    * [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
+    * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
+    * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
+    * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
+    * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
+    * [mingus](http://bspaans.github.io/python-mingus/) - An advanced music theory and notation package with MIDI file and playback support.
+    * [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
+    * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
+    * [timeside](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
+* Metadata
+    * [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
+    * [eyed3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
+    * [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
+    * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 
 # Drone Backend
 
@@ -282,8 +396,6 @@ Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, Or
 
 *Libraries for working with WebSocket.*
 
-* [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
-* [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 * [websockets](https://github.com/aaugustin/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
 
 ### ASGI Servers
@@ -316,7 +428,9 @@ Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, Or
     * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
     * [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
-
+* S3 store
+    * [minio-py](https://github.com/minio/minio-py) - Official synchronous the MinIO Python Client SDK.
+    * [miniopy-async](https://github.com/hlf20010508/miniopy-async) - Unofficial Asynchronous MinIO Client SDK for Python
 
 ## Task Queues
 
@@ -433,7 +547,127 @@ Python, TensorFlow, PyTorch, ROS2, Raspberry Pi (Jetson), Drone sim, С/С++, Or
 
 Where to discover learning resources or new Python libraries.
 
+## Courses
+* [Flying Car and Autonomous Flight Engineer](https://eu.udacity.com/course/flying-car-nanodegree--nd787) Udacity - Master autonomous flight software engineering skills as you build your career in flying cars and drone robotics.
+* [Robotics: Dynamics and Control](https://www.edx.org/course/robotics-dynamics-control-pennx-robo3x) edX - Learn how to develop dynamic models of robot manipulators, mobile robots, and drones (quadrotors).
+
+### Udemy
+
+* [UAS/Drone Remote Pilot Test Prep for Part 107](https://www.udemy.com/remote-pilot-certificate-test-prep-for-part-107-exam/) - :dollar: - A comprehensive class that encompasses everything needed to know to become a proficient Remote Pilot and to pass the FAA written initial or recurrent exam.
+* [Drone Photography | Shoot Professional Photos With Any Drone](https://www.udemy.com/course/dronephotography/) - :dollar: - Your Complete Online Guide to Shooting Incredible Drone Photography Like a Professional
+* [Drone Programming with Python - Face Recognition & Tracking](https://www.udemy.com/course/drone-programming-with-python-face-recognition-tracking/) - :dollar: - Operating drone with network programming, face recognition using OpenCV, automatic tracking, implementing web camera
+
+## Services
+
+* [AirMap](https://www.airmap.com/) - Aeronautical data & services to unmanned aircraft.
+* [DroneDeploy](https://www.dronedeploy.com/) - Drone & UAV Mapping Software.
+* [RotorBuilds](https://rotorbuilds.com/) - FPV Part lists and Build Logs.
+* [Zeitiew](https://www.zeitview.com/) - Online marketplace for Drone services. Formerly known as DroneBase.
+
 ## Newsletters
+
+### Remote Control Transmitters
+
+* [FlySky](http://www.flyskyrc.com/) - Entry level transmitters.
+* [FrSky](https://www.frsky-rc.com/) - Taranis and Horus line of transmitters powered by OpenTX firmware.
+* [Futaba](https://www.futabarc.com)
+* [Spektrum](https://www.spektrumrc.com)
+* [Team Blacksheep](https://team-blacksheep.com) - Tango 1 and 2 transmitters.
+
+### Headsets
+
+* [DJI Digital FPV System](https://www.dji.com/fpv/) - Low latency digital FPV goggles.
+* [FatShark](https://www.fatshark.com) - Headsets praised by racers.
+* [ORQA FPV.One](https://orqafpv.com) - Headsets and controllers
+
+### Video Receivers
+
+#### 1.3GHz
+
+* [ClearView XLR 1.3](https://clearview-direct.com/product-category/ground-station-receivers/1-3-receivers/)
+
+#### 2.4GHz
+
+* [ClearView XLR 2.4](https://clearview-direct.com/product-category/ground-station-receivers/2-4-receivers/)
+* [TBS Ground station](https://www.team-blacksheep.com/products/prod:tbs_gs_2g4)
+
+#### 5.8GHz
+
+* [ClearView Goggle Receiver](https://clearview-direct.com/shop/clearview-goggle-products/clearview-goggle-module/)
+* [ClearView 5.8GHz Ground Station Receivers](https://clearview-direct.com/product-category/ground-station-receivers/5-8-receivers/)
+* [rapidFIRE](https://www.immersionrc.com/fpv-products/rapidfire/)
+* [TBS Fusion](https://www.team-blacksheep.com/products/prod:tbs_fusion) - Has CRSF integration (for changing channels).
+
+### Electronics and Motors
+
+Terminology:
+
+* FC = Flight Controller
+* ESC = Electronic Speed Controller
+* PDB = Power Distribution Board
+* RX = Receivers
+* TX = Transmitters (external)
+* VRX = Video Receiver
+* VTX = Video Transmitter
+
+List:
+
+* [3BHobby](https://www.3bhobby.com) - Motors
+* [Airbot](https://store.myairbot.com/flight-controller.html) - FC, ESC
+* [BrotherHobby](https://www.brotherhobbystore.com) - Motors
+* [ClearView](https://clearview-direct.com/) - VRX, VTX
+* [DalProp](http://dalprop.com) - Props
+* [Diatone](https://www.diatone.us/) - FC, ESC, VTX, Motors
+* [Fl1ghtOne](https://flightone.com) - FC, ESC
+* [Flyduino](https://www.flyduino.net/en_US/) - FC, ESC
+* [GemFan](https://www.gfprops.com/) - Props
+* [Hobbywing](http://www.hobbywing.com) - FC, ESC, Motors
+* [Holybro](http://www.holybro.com) - FC, ESC, PDB
+* [HQProp](http://www.hqprop.com) - Props
+* [iFlight](https://www.iflight-rc.com) - Motors
+* [Lumenier](https://www.lumenier.com) - FC, ESC, PDB, VTX, Motors
+* [MatekSys](http://www.mateksys.com) - FC, PDB, VTX
+* [RacerStar](https://www.racerstar.com) - FC, ESC, Motors
+* [SP Racing](http://seriouslypro.com) - FC
+* [T-Motor](http://www.tmotor.com) - FC, Motors
+* [Team Blacksheep](https://www.team-blacksheep.com) - ESC, RX, TX, VRX, VTX
+
+### Cameras
+
+* [Caddx.us](https://caddxfpv.com/)
+* [DJI O3 Air unit](https://www.dji.com/ee/o3-air-unit) - Camera with digital video transmission
+* [Foxeer](http://www.foxeer.com)
+* [RunCam](https://runcam.com)
+
+### Vendors
+#### Consumer
+
+* [Autel](https://www.autelpilot.eu/) - :cn: - Compact EVO series drones, alternative to DJI Mavic series. Dragonfish series fixed-wing UAVs coming soon.
+* [DJI](https://www.dji.com/) - :cn: - DJI is the world's leader in the consumer drone market - Mavic, Phantom, Inspire and Matrice series drones.
+* [Eachine](https://www.eachine.com/) - :cn: - Mini and micro drones. FPV beginners sets.
+* [Hubsan](https://www.hubsan.com/na/) - :cn: - Micro and Mini lower cost drones.
+* [Parrot SA](https://www.parrot.com/global/) - :fr: - Famously Parrot Bebop and Parrot AR series drones.
+* [Syma](http://www.symatoys.com/) - :cn: - RC toy quadcopters.
+* [Yuneec International](https://www.yuneec.com/) - :cn: - Yuneec camera drones.
+
+#### Military Vendors
+
+* [AeroVironment](https://www.avinc.com/) - Small range fixed-wing UAVs.
+* [Baykar](https://www.baykartech.com/en/) - Bayraktar series battle- proven long-range fixed-wing UAVs.
+* [Eli](http://www.uav.ee/) - Pneumatic launchers for fixed wing UAVs.
+* [INSITU](https://www.insitu.com/) - Long-range and extended endurance fixed-wing UAVs.
+* [Threod Systems](http://threod.com/) - Fixed-wing and multi-rotor UAVs.
+
+### Unmanned Ground Vehicles
+
+#### Autonomous Ground Vehicles
+
+* [JPL Open Source Rover](https://github.com/nasa-jpl/open-source-rover) - Nasa JPL scaled down version of the curiosity rover, made of COTS.
+* [Turtlebot](https://www.turtlebot.com) - Open sourced UGV, [ROS](http://www.ros.org/) standard platform.
+
+### Unmanned Underwater Vehicles
+
+* [Geneinno](https://www.geneinno.com/) - Underwater drones.
 
 ## Podcasts
 
