@@ -7,7 +7,7 @@
 List of awesome , libraries, software and resources for drone create, conforming to the [Awesome Manifesto](awesome.md)
 
 Contributions *very welcome* but first see [Contributing](#contributing)
-
+See En-Ru [glossary](GLOSSARY_EN-RU.md) for translate.
 
 # Context
 <!-- TOC -->
@@ -599,14 +599,15 @@ Where to discover learning resources or new Python libraries.
 ### Electronics and Motors
 
 Terminology:
+See [glossary en-ru](GLOSSARY_EN-RU.md) for translate.  
 
-* FC = Flight Controller
-* ESC = Electronic Speed Controller
-* PDB = Power Distribution Board
-* RX = Receivers
-* TX = Transmitters (external)
-* VRX = Video Receiver
-* VTX = Video Transmitter
+* FC - Flight Controller
+* ESC - Electronic Speed Controller
+* PDB - Power Distribution Board
+* RX - Receivers
+* TX - Transmitters (external)
+* VRX - Video Receiver
+* VTX - Video Transmitter
 
 List:
 
