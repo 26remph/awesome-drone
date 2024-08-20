@@ -6,7 +6,7 @@
 
 List of awesome , libraries, software and resources for drone create, conforming to the [Awesome Manifesto](awesome.md)
 
-Contributions *very welcome* but first see [Contributing](#contributing)
+Contributions *very welcome* but first see [Contributing](#contributing)  
 See En-Ru [glossary](GLOSSARY_EN-RU.md) for translate.
 
 # Context
